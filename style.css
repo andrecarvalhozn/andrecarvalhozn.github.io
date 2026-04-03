@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    background: #1a0b2e;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background:
+        linear-gradient(180deg, rgba(10, 6, 20, 0.35) 0%, transparent 35%, rgba(10, 6, 20, 0.45) 100%),
+        url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=85') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(1.02) saturate(1.2) contrast(1.03);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 40px 0 rgba(88, 28, 135, 0.35), 0 4px 20px rgba(236, 72, 153, 0.15);
+    padding: 2.5rem 2.5rem 2.25rem 2.5rem;
+    text-align: center;
+    z-index: 1;
+    min-width: 340px;
+    max-width: 430px;
+}
+
+.profile-pic {
+    width: 124px;
+    height: 124px;
+    margin: calc(-62px - 2.5rem) auto 1.35rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 0.35rem 0 0.85rem 0;
+    font-size: 1.7rem;
+    color: #5b21b6;
+    font-weight: 500;
+}
+.subtitle {
+    color: #262626;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.65;
+    margin: 0 0 1.15rem 0;
+}
+.email {
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0 0 1.35rem 0;
+}
+.social-links {
+    margin: 0.25rem 0 1.5rem 0;
+}
+.social-links a {
+    color: #7e22ce;
+    margin: 0 0.45rem;
+    font-size: 1.55rem;
+    transition: color 0.2s;
+}
+.social-links a:hover {
+    color: #581c87;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn {
+    background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: filter 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+.btn:hover {
+    filter: brightness(1.12);
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+        min-width: 90vw;
+        max-width: 95vw;
+    }
+    .profile-pic {
+        width: 96px;
+        height: 96px;
+        margin: calc(-48px - 1.2rem) auto 1.2rem auto;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+}
